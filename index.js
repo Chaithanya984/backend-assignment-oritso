@@ -8,7 +8,7 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: "https://frontend-assignment-oritso.vercel.app" }));
 app.use(express.json());
 
 const dbpath = path.join(__dirname, "usertask.db");
