@@ -8,7 +8,14 @@ const jwt = require("jsonwebtoken");
 
 const app = express();
 
-app.use(cors({ origin: "https://frontend-assignment-oritso.vercel.app" }));
+app.use(
+  cors({
+    origin: "https://frontend-assignment-oritso.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 app.use(express.json());
 
 const dbpath = path.join(__dirname, "usertask.db");
